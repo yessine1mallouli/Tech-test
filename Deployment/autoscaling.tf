@@ -8,6 +8,10 @@ resource "aws_launch_configuration" "levelup-launchconfig" {
   lifecycle {
     create_before_destroy = true
   }
+  tags = {
+    Name = "custom_instance"
+  }
+
   provisioner "file" {
       source = "elasticsearch.yml"
       destination = "/tmp/elasticsearch.yml"
@@ -37,7 +41,7 @@ resource "aws_launch_configuration" "levelup-launchconfig" {
   }
 
   connection {
-    host        = coalesce(self.public_ip, self.private_ip)
+    #host        = coalesce(self.public_ip, self.private_ip)
     type        = "ssh"
     user        = var.INSTANCE_USERNAME
     private_key = file(var.PATH_TO_PRIVATE_KEY)

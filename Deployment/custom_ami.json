@@ -11,13 +11,10 @@
             "region": "eu-west-3",
             "source_ami_filter": {
                 "filters": {
+                    "image_id": "ami-052f10f1c45aa2155" ,
                     "virtualization-type": "hvm",
-                    "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
                     "root-device-type": "ebs"
                 },
-                "owners": [
-                    "099720109477"
-                ],
                 "most_recent": true
             },
             "instance_type": "m4.large",

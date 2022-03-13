@@ -8,9 +8,6 @@ resource "aws_launch_configuration" "levelup-launchconfig" {
   lifecycle {
     create_before_destroy = true
   }
-  tags = {
-    Name = "custom_instance"
-  }
 
   provisioner "file" {
       source = "elasticsearch.yml"

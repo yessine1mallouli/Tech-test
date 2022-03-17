@@ -1,4 +1,14 @@
 source "amazon-ebs" "ubuntu-ami" {
+    access_key = "LcUD2WRdc8emG2XcsfTwiIJJIawjACiq987orFgT"
+    secret_key = "AKIAXXL2HOCU7PFZAVZM"
+    region = "eu-west-3"
+    ami_name = "ELK_image - ${uuidv4()}"
+    instance_type = "t2.micro"
+    source_ami = "ami-052f10f1c45aa2155"
+    communicator = "ssh"
+    ssh_username = "ubuntu"
+} 
+/*source "amazon-ebs" "ubuntu-ami" {
     access_key = "${var.AWS_SECRET_KEY}"
     secret_key = "${var.AWS_ACCESS_KEY}"
     region = "eu-west-3"
@@ -7,7 +17,7 @@ source "amazon-ebs" "ubuntu-ami" {
     source_ami = "ami-052f10f1c45aa2155"
     communicator = "ssh"
     ssh_username = "${var.INSTANCE_USERNAME}"
-} 
+}*/ 
 build {
     name = "ELK_build"
     sources = ["source.amazon-ebs.ubuntu-ami"]

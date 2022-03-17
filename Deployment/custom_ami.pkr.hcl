@@ -10,7 +10,7 @@ source "amazon-ebs" "ubuntu-ami" {
 } 
 build {
     name = "ELK_build"
-    source = ["source.amazon-ebs.ubuntu-ami"]
+    sources = ["source.amazon-ebs.ubuntu-ami"]
 
     provisioner "file" {
         source = "elasticsearch.yml"

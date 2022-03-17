@@ -13,24 +13,24 @@ build {
     source = ["source.amazon-ebs.ubuntu-ami"]
 
     provisioner "file" {
-        source = "elasticsearch.yml",
+        source = "elasticsearch.yml"
         destination = "/tmp/elasticsearch.yml"
         only = ["amazon-ebs.ubuntu-ami"]
     }
     
     provisioner "file" {
-        source = "kibana.yml",
+        source = "kibana.yml"
         destination = "/tmp/kibana.yml"
         only = ["amazon-ebs.ubuntu-ami"]
     }
 
     provisioner "file" {
-        source = "apache-01.conf",
+        source = "apache-01.conf"
         destination = "/tmp/apache-01.conf"
         only = ["amazon-ebs.ubuntu-ami"]
     }
     provisioner "file" {
-        source = "installELK.sh",
+        source = "installELK.sh"
         destination = "/tmp/installELK.sh"
         only = ["amazon-ebs.ubuntu-ami"]
     }

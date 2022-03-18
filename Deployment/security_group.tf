@@ -5,7 +5,7 @@ module "myvpc" {
     ENVIRONMENT = var.ENVIRONMENT
     AWS_REGION  = var.AWS_REGION
     */
-    #in this case even is we left in vpc variables in module AWS_REGION= us-east-2 as default value, using the
+    #in this case even if we left in vpc variables in module AWS_REGION= eu-west-2 as default value, using the
     #previous line it will take the default variable AWS_REGION value of this variables.tf file
 }
 

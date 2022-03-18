@@ -8,7 +8,7 @@ resource "aws_launch_configuration" "levelup-launchconfig" {
   lifecycle {
     create_before_destroy = true
   }
-  user_data = file("installELK.sh")
+  #user_data = file("installELK.sh")
 }
 
 #Generate Key

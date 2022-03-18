@@ -18,11 +18,11 @@ variable "AMIS" {
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "../../keys/prac_keypair.pem "
+  default = /* path/to/private/key */
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "../../keys/prac_keypair.pub"
+  default = /* path/to/public/key */
 }
 
 variable "INSTANCE_USERNAME" {

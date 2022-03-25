@@ -1,3 +1,12 @@
+packer {
+    required_plugins {
+        amazon = {
+            version = " >= 1.0.0 "
+            source = "github.com/hashicorp/amazon"
+        }
+    }
+}
+
 source "amazon-ebs" "ubuntu-ami" {
     access_key = "${var.AWS_SECRET_KEY}"
     secret_key = "${var.AWS_ACCESS_KEY}"

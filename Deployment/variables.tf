@@ -1,6 +1,6 @@
 variable "AWS_ACCESS_KEY" {
     type = string
-    default = /* aws acces key */
+    default = "AKIAXXL2HOCU7PFZAVZM"
 }
 
 variable "AWS_SECRET_KEY" {}
@@ -18,11 +18,11 @@ variable "AMIS" {
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = /* path/to/private/key */
+  default = "../../keys/prac_keypair.pem "
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = /* path/to/public/key */
+  default = "../../keys/prac_keypair.pub"
 }
 
 variable "INSTANCE_USERNAME" {

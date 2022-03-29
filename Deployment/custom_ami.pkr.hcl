@@ -16,6 +16,7 @@ source "amazon-ebs" "ubuntu-ami" {
     source_ami = "ami-052f10f1c45aa2155"
     communicator = "ssh"
     ssh_username = "${var.INSTANCE_USERNAME}"
+    ami_regions = ["eu-west-3"]
 }
 build {
     name = "ELK_build"

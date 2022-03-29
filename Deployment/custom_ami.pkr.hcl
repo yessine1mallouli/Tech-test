@@ -14,7 +14,7 @@ source "amazon-ebs" "ubuntu-ami" {
     ami_name = "ELK_image - ${uuidv4()}"
     instance_type = "t2.micro"
     source_ami = "ami-052f10f1c45aa2155"
-    communicator = "ssh"
+    #communicator = "ssh"
     ssh_username = "${var.INSTANCE_USERNAME}"
     #ami_regions = ["eu-west-3"]
 }

@@ -8,15 +8,15 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu-ami" {
-    #access_key = "${var.AWS_SECRET_KEY}"
-    #secret_key = "${var.AWS_ACCESS_KEY}"
+    access_key = "${var.AWS_SECRET_KEY}"
+    secret_key = "${var.AWS_ACCESS_KEY}"
     region = "eu-west-3"
     ami_name = "ELK_image - ${uuidv4()}"
     instance_type = "t2.micro"
     source_ami = "ami-052f10f1c45aa2155"
-    #communicator = "ssh"
+    communicator = "ssh"
     ssh_username = "${var.INSTANCE_USERNAME}"
-    #ami_regions = ["eu-west-3"]
+    ami_regions = ["eu-west-3"]
 }
 build {
     name = "ELK_build"
